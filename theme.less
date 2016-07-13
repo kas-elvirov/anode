@@ -8,7 +8,7 @@
 @black: #000000;
 @black-light: #2D2D2D;
 @black-masala: #2D2A25;
-@gray: rgba(71, 72, 75, .5);
+@gray: rgba(71, 72, 75, .7);
 @gray-light: #B8C4C1;
 @white: #ffffff;
 @white-smoke: #C0D8D1;
@@ -17,31 +17,34 @@
 @green: #29B26A;
 @green-light: #00FF75;
 @green-superlight: #C3FEF0;
-@orange: #FFA928;
-@yellow: #FFE448;
-@blue: #4285F4;
+@orange: #FF5722;
+@yellow: #FFF9C4;
+@blue: #448AFF;
 
 
 
 /* EDITOR styling */
-@background: @black;
+@background: #292929;
 @background-selected: @gray;
-@background-activeline: @black-light;
+@background-activeline: #1A1A1A;
 @gutters: @black-masala;
 @comment: @gray-light;
 @comment-active: @white;
 @keyword: @pink;
-@definition: @yellow;
+@definition: #D4E157;
 @number: @green-light;
 @tag: @green;
 @cursor: @white;
 @brackets-active: rgba(255, 255, 255, .2);
 @error: @red;
 
+
+
+/* STYLES */
 // Code editor
 .CodeMirror, .CodeMirror-scroll {
     background-color: @background;
-    color: @red;
+    color: #fff;
 }
 
 // Selected text
@@ -77,10 +80,13 @@
     background: #F92672!important;
     color: #F8F8F2!important;
 }
+
+// Matching tag
 .CodeMirror-matchingtag {
-    background:rgba(255,255,255,.15)!important;
+    background-color:#000!important;
 }
 
+// Cursor
 .CodeMirror .CodeMirror-cursor {
     border-left: 2px solid @cursor !important;
 }
@@ -94,24 +100,20 @@
 
 // Qualifier
 .cm-qualifier {
-    color: @blue!important;
+    color: #64B5F6!important;
 }
 
 .CodeMirror-activeline .cm-qualifier {
-    color: #9FF9F3!important;
+    color: #448AFF!important;
+    text-shadow: 0 0 1px #448AFF;
 }
 
 // Keyword
 .cm-keyword,
 .cm-builtin,
 .cm-quote {
-    color: @keyword;
+    color: #448AFF!important;
 }
-
-.cm-atom { color: @definition; } // Definition
-.cm-number { color: @number; } // Number
-.cm-def {	color: @definition; } // Definition
-span.cm-tag { color: @tag; } // Tag
 
 // Variables
 .cm-variable,
@@ -119,30 +121,34 @@ span.cm-tag { color: @tag; } // Tag
 .cm-variable-3,
 .cm-bracket {
     color: @green;
+    border-bottom: 1px solid @gray;
 }
 
 .CodeMirror-activeline .cm-variable,
 .CodeMirror-activeline .cm-variable-2,
-.CodeMirror-activeline .cm-variable-3,
-.CodeMirror-activeline .cm-bracket {
-    border: 1px solid @grey;
+.CodeMirror-activeline .cm-variable-3 {
+    border-bottom: 1px solid @white-smoke;
+    text-shadow: 0 0 1px @green;
 }
 
+.cm-atom { color: @definition; } // Definition
+.cm-number { color: #D50000; } // Number
+.cm-def {	color: @definition; } // Definition
+span.cm-tag { color: #F44336; } // Tag
+.cm-attribute { color: #64DD17; } // Attribute
+.cm-string { color: #BCAAA4; } // String
+.cm-string-2 { color: red; }
+.cm-error { color: @error; }
+.cm-property { color: #CE93D8; } // Property
 
 .cm-meta,
 .cm-operator {
-    color: @keyword;
-}
-
-.cm-error {
-    color: @error;
-    background: rgba(245, 119, 120, .1);
+    color: #FFFF00;
 }
 
 
 
 /* Non-editor styling */
-
 .image-view,
 .not-editor {
     background-color: @background;
