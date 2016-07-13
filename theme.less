@@ -7,11 +7,147 @@
 /* COLORS */
 @black: #000000;
 @black-light: #2D2D2D;
+@black-masala: #2D2A25;
+@gray: rgba(71, 72, 75, .5);
+@gray-light: #B8C4C1;
 @white: #ffffff;
+@white-smoke: #C0D8D1;
 @red: #A72726;
+@pink: #F92672;
 @green: #29B26A;
 @green-light: #00FF75;
+@green-superlight: #C3FEF0;
 @orange: #FFA928;
+@yellow: #FFE448;
+@blue: #4285F4;
 
 
 
+/* EDITOR styling */
+@background: @black;
+@background-selected: @gray;
+@background-activeline: @black-light;
+@gutters: @black-masala;
+@comment: @gray-light;
+@comment-active: @white;
+@keyword: @pink;
+@definition: @yellow;
+@number: @green-light;
+@tag: @green;
+@cursor: @white;
+@brackets-active: rgba(255, 255, 255, .2);
+@error: @red;
+
+// Code editor
+.CodeMirror, .CodeMirror-scroll {
+    background-color: @background;
+    color: @red;
+}
+
+// Selected text
+.CodeMirror-selected {
+    background: @background-selected;
+}
+
+// Line numbers
+.CodeMirror-gutters {
+    background-color: @gutters;
+    border-right: 1px solid @gray;
+}
+.CodeMirror .CodeMirror-linenumber {
+    color: @white-smoke;
+}
+
+// Active line
+.CodeMirror-activeline-background,
+.CodeMirror-activeline .CodeMirror-gutter-elt {
+    background: @background-activeline;
+}
+
+// Matching bracket
+.CodeMirror-matchingbracket {
+    background: 0 0!important;
+    color: #1dff00!important;
+    text-shadow: 0 0 10px #1dff00;
+    font-weight: 700;
+}
+
+// No matching bracket
+.CodeMirror-nonmatchingbracket {
+    background: #F92672!important;
+    color: #F8F8F2!important;
+}
+.CodeMirror-matchingtag {
+    background:rgba(255,255,255,.15)!important;
+}
+
+.CodeMirror .CodeMirror-cursor {
+    border-left: 2px solid @cursor !important;
+}
+
+// Comments
+.cm-comment { color: @comment; }
+
+.CodeMirror-activeline .cm-comment {
+    color: @comment-active;
+}
+
+// Qualifier
+.cm-qualifier {
+    color: @blue!important;
+}
+
+.CodeMirror-activeline .cm-qualifier {
+    color: #9FF9F3!important;
+}
+
+// Keyword
+.cm-keyword,
+.cm-builtin,
+.cm-quote {
+    color: @keyword;
+}
+
+.cm-atom { color: @definition; } // Definition
+.cm-number { color: @number; } // Number
+.cm-def {	color: @definition; } // Definition
+span.cm-tag { color: @tag; } // Tag
+
+// Variables
+.cm-variable,
+.cm-variable-2,
+.cm-variable-3,
+.cm-bracket {
+    color: @green;
+}
+
+.CodeMirror-activeline .cm-variable,
+.CodeMirror-activeline .cm-variable-2,
+.CodeMirror-activeline .cm-variable-3,
+.CodeMirror-activeline .cm-bracket {
+    border: 1px solid @grey;
+}
+
+
+.cm-meta,
+.cm-operator {
+    color: @keyword;
+}
+
+.cm-error {
+    color: @error;
+    background: rgba(245, 119, 120, .1);
+}
+
+
+
+/* Non-editor styling */
+
+.image-view,
+.not-editor {
+    background-color: @background;
+}
+
+.view-pane .image-view {
+    color: @background-selected;
+}
