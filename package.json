@@ -1,7 +1,7 @@
 {
     "title": "Anode",
     "name": "anode",
-    "description": "Dark theme for Brackets.",
+    "description": "Anode theme helps you quickly navigate in your code.",
     "homepage": "https://github.com/artem-solovev/anode",
     "version": "0.0.1",
     "author": "Artem Solovev <artem.solovev.lse@gmail.com> (http://anart.work)",
@@ -14,5 +14,5 @@
         "type": "git",
         "url": "git://github.com/artem-solovev/anode.git"
     },
-    "keywords": ["theme", "dark"]
+    "keywords": ["theme", "dark", "clean code"]
 }
