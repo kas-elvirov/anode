@@ -1,4 +1,4 @@
-Color Scheme for Brackets [Anode](https://github.com/artem-solovev/anode/)
+# Color Scheme for Brackets [Anode](https://github.com/artem-solovev/anode/)
 ===========================
 
 
@@ -52,6 +52,7 @@ Color Scheme for Brackets [Anode](https://github.com/artem-solovev/anode/)
 
 ## Image
 ![Image Screenshot](screenshots/image.png)
+
 
 **Gratitudes**
 * [Laura Reen](http://laurareen.com/) for logo
