@@ -73,7 +73,9 @@
 
 .CodeMirror-activeline .cm-meta { text-shadow: 0 0 1px #D50000; }
 
-.CodeMirror-activeline .cm-atom { color: #CDDC39; }
+.CodeMirror-activeline .cm-atom, .cm-def { color: #CDDC39; }
+
+.CodeMirror-activeline .cm-number { color: #F44336; }
 
 
 /* 4.0 Brackets */
@@ -116,11 +118,11 @@
 
 
 /* 10.0 Other */
-.cm-atom { color: #D4E157; } // Definition
+.cm-atom,
+.cm-def {	color: #D4E157; } // Definition
 
 .cm-number { color: #EF5350; } // Number
 
-.cm-def {	color: #D4E157; } // Definition
 
 span.cm-tag { color: #FF8A65; } // Tag
 
