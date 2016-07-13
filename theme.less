@@ -1,56 +1,50 @@
-/*! Anode theme for Brackets
-* by Artem Solovev!
-**/
+/*  Anode theme for Brackets by Artem Solovev
+
+------------------------------
+>>>> TABLE OF CONTENTS:
+------------------------------
+1.0 Code editor
+2.0 Line numbers
+3.0 Active line
+4.0 Brackets
+5.0 Cursor
+6.0 Tags
+7.0 Comments
+8.0 Qualifier
+9.0 Variables
+10.0 Other
+11.0 Non-editor styling
+
+
+------------------------------
+*/
 
 
 
-/* COLORS */
-
-/* EDITOR styling */
-@background: #292929;
-@background-selected: rgba(71, 72, 75, .7);
-@background-activeline: #1A1A1A;
-@gutters: #2D2A25;
-@comment: #B8C4C1;
-@comment-active: #ffffff;
-@keyword: #F92672;
-@definition: #D4E157;
-@number: #00FF75;
-@tag: #29B26A;
-@cursor: #ffffff;
-@brackets-active: rgba(255, 255, 255, .2);
-@error: #A72726;
-
-
-
-/* STYLES */
-// Code editor
+/* 1.0 Code editor */
 .CodeMirror, .CodeMirror-scroll {
-    background-color: @background;
+    background-color: #292929;
     color: #fff;
 }
 
-// Selected text
-.CodeMirror-selected {
-    background: @background-selected;
-}
+.CodeMirror-selected { background: rgba(71, 72, 75, .7); }
 
-// Line numbers
+
+/* 2.0 Line numbers */
 .CodeMirror-gutters {
-    background-color: @gutters;
+    background-color: #2D2A25;
     border-right: 1px solid rgba(71, 72, 75, .7);
 }
-.CodeMirror .CodeMirror-linenumber {
-    color: #C0D8D1;
-}
 
-// Active line
+.CodeMirror .CodeMirror-linenumber { color: #C0D8D1; }
+
+
+/* 3.0 Active line */
 .CodeMirror-activeline-background,
-.CodeMirror-activeline .CodeMirror-gutter-elt {
-    background: @background-activeline;
-}
+.CodeMirror-activeline .CodeMirror-gutter-elt { background: #1A1A1A; }
 
-// Matching bracket
+
+/* 4.0 Brackets */
 .CodeMirror-matchingbracket {
     background: 0 0!important;
     color: #76FF03!important;
@@ -58,53 +52,40 @@
     font-weight: 700;
 }
 
-// No matching bracket
 .CodeMirror-nonmatchingbracket {
     background: #F92672!important;
     color: #F8F8F2!important;
 }
 
-// Matching tag
-.CodeMirror-matchingtag {
-    background-color:#000!important;
-}
 
-// Cursor
-.CodeMirror .CodeMirror-cursor {
-    border-left: 2px solid @cursor !important;
-}
+/* 5.0 Cursor */
+.CodeMirror .CodeMirror-cursor { border-left: 2px solid #ffffff!important; }
 
-// Comments
-.cm-comment { color: @comment; }
 
-.CodeMirror-activeline .cm-comment {
-    color: @comment-active;
-}
+/* 6.0 Tags */
+.CodeMirror-matchingtag { background-color:#000!important; }
 
-// Qualifier
-.cm-qualifier {
-    color: #64B5F6!important;
-}
+
+/* 7.0 Comments */
+.cm-comment { color: #B8C4C1; }
+
+.CodeMirror-activeline .cm-comment { color: #ffffff; }
+
+
+/* 8.0 Qualifier */
+.cm-qualifier { color: #64B5F6!important; }
 
 .CodeMirror-activeline .cm-qualifier {
     color: #448AFF!important;
     text-shadow: 0 0 1px #448AFF;
 }
 
-// Keyword
-.cm-keyword,
-.cm-builtin,
-.cm-quote {
-    color: #448AFF!important;
-}
 
-// Variables
+/* 9.0 Variables */
 .cm-variable,
 .cm-variable-2,
 .cm-variable-3,
-.cm-bracket {
-    color: #29B26A;
-}
+.cm-bracket { color: #29B26A; }
 
 .CodeMirror-activeline .cm-variable,
 .CodeMirror-activeline .cm-variable-2,
@@ -113,31 +94,37 @@
     text-shadow: 0 0 1px #29B26A;
 }
 
-.cm-atom { color: @definition; } // Definition
+
+/* 10.0 Other */
+.cm-atom { color: #D4E157; } // Definition
+
 .cm-number { color: #EF5350; } // Number
-.cm-def {	color: @definition; } // Definition
+
+.cm-def {	color: #D4E157; } // Definition
+
 span.cm-tag { color: #FF8A65; } // Tag
+
 .cm-attribute { color: #64DD17; } // Attribute
+
 .cm-string { color: #BCAAA4; } // String
-.cm-string-2 { color: red; }
-.cm-error { color: @error; }
+
+.cm-string-2 { color: #D50000; } // String
+
+.cm-error { color: #A72726; } // Error
+
 .cm-property { color: #CE93D8; } // Property
 
-.cm-meta {
-    color: red;
-}
-.cm-operator {
-    color: #64B5F6;
-}
+.cm-meta { color: #D50000; }
+
+.cm-operator { color: #64B5F6; }
+
+.cm-keyword,
+.cm-builtin,
+.cm-quote { color: #448AFF!important; }
 
 
-
-/* Non-editor styling */
+/* 11.0 Non-editor styling */
 .image-view,
-.not-editor {
-    background-color: @background;
-}
+.not-editor { background-color: #292929; }
 
-.view-pane .image-view {
-    color: @background-selected;
-}
+.view-pane .image-view { color: rgba(71, 72, 75, .7); }
