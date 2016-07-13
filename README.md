@@ -1,6 +1,6 @@
 Anode Color Scheme for Brackets
 ===========================
-###[Anode makes your code clean](https://github.com/artem-solovev/anode/)
+### [Anode makes your code clean](https://github.com/artem-solovev/anode/)
 
 ![Anode Icon](anode-logo.png)
 
