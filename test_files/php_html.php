@@ -9,11 +9,11 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
     <head>
-        <title>Новостная лента</title>
+        <title>News</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
     <body>
-        <a href="catalog.php?action=catalog">Каталог</a>
+        <a href="catalog.php?action=catalog">Catalogue</a>
         <hr>
         <?php
         switch($_GET['action']){

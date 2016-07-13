@@ -19,18 +19,18 @@ class DVD{
         $this->_band = $band;
     }
 
-    /* Äîáàâëåíèå òðåêà â êîëëåêöèþ äëÿ ñîñòàâëåíèÿ àíòîëîãèè èñïîëíèòåëÿ */
+    /* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet vitae orci et cursus. Nam viverra aliquet maximus.  */
     public function addTrack($track){
         $this->_tracks[] = $track;
     }
 
-    /* Ïîëüçîâàòåëü äåëàåò çàêàç */
+    /* Lorem ipsum dolor sit amet */
     public function buy(){
         $this->_db->updateQuantity($this->_id, -1);
-        // Äðóãèå äåéñòâèÿ
+        // Lorem ipsum dolor sit amet
     }
 
-    /* Ïîêàçûâàåì ñïèñîê Èñïîëíèòåëü - Àëüáîì */
+    /* Lorem ipsum dolor sit amet */
     public function showCatalog(){
         $result = $this->_db->selectItems();
         if(is_array($result))
