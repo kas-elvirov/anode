@@ -5,38 +5,21 @@
 
 
 /* COLORS */
-@black: #000000;
-@black-light: #2D2D2D;
-@black-masala: #2D2A25;
-@gray: rgba(71, 72, 75, .7);
-@gray-light: #B8C4C1;
-@white: #ffffff;
-@white-smoke: #C0D8D1;
-@red: #A72726;
-@pink: #F92672;
-@green: #29B26A;
-@green-light: #00FF75;
-@green-superlight: #C3FEF0;
-@orange: #FF5722;
-@yellow: #FFF9C4;
-@blue: #448AFF;
-
-
 
 /* EDITOR styling */
 @background: #292929;
-@background-selected: @gray;
+@background-selected: rgba(71, 72, 75, .7);
 @background-activeline: #1A1A1A;
-@gutters: @black-masala;
-@comment: @gray-light;
-@comment-active: @white;
-@keyword: @pink;
+@gutters: #2D2A25;
+@comment: #B8C4C1;
+@comment-active: #ffffff;
+@keyword: #F92672;
 @definition: #D4E157;
-@number: @green-light;
-@tag: @green;
-@cursor: @white;
+@number: #00FF75;
+@tag: #29B26A;
+@cursor: #ffffff;
 @brackets-active: rgba(255, 255, 255, .2);
-@error: @red;
+@error: #A72726;
 
 
 
@@ -55,10 +38,10 @@
 // Line numbers
 .CodeMirror-gutters {
     background-color: @gutters;
-    border-right: 1px solid @gray;
+    border-right: 1px solid rgba(71, 72, 75, .7);
 }
 .CodeMirror .CodeMirror-linenumber {
-    color: @white-smoke;
+    color: #C0D8D1;
 }
 
 // Active line
@@ -120,14 +103,14 @@
 .cm-variable-2,
 .cm-variable-3,
 .cm-bracket {
-    color: @green;
+    color: #29B26A;
 }
 
 .CodeMirror-activeline .cm-variable,
 .CodeMirror-activeline .cm-variable-2,
 .CodeMirror-activeline .cm-variable-3 {
-    border-bottom: 1px solid @white-smoke;
-    text-shadow: 0 0 1px @green;
+    border-bottom: 1px solid #C0D8D1;
+    text-shadow: 0 0 1px #29B26A;
 }
 
 .cm-atom { color: @definition; } // Definition
