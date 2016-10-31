@@ -3,8 +3,8 @@
     "name": "artemsolovev.anode",
     "description": "Anode theme helps you quickly navigate in your code.",
     "homepage": "https://github.com/artem-solovev/anode",
-    "version": "0.0.1",
-    "author": "Artem Solovev <artem.solovev.lse@gmail.com> (http://anart.work)",
+    "version": "1.0.1",
+    "author": "Artem Solovev <artem.solovev.lse@gmail.com>",
     "license": "MIT",
     "theme": {
         "file": "theme.less",
