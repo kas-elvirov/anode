@@ -3,137 +3,193 @@
 ------------------------------
 >>>> TABLE OF CONTENTS:
 ------------------------------
-1.0 Code editor
-2.0 Line numbers
-3.0 Active line
-4.0 Brackets
-5.0 Cursor
-6.0 Tags
-7.0 Comments
-8.0 Variables
-9.0 Other
-10.0 Non-editor styling
+1.0 
 
 
 ------------------------------
 */
 
 
-
-/* 1.0 EDITOR */
-.CodeMirror, .CodeMirror-scroll {
-    background-color: #212121;
-    color: #fff;
-}
-
-.CodeMirror-selected { background: rgba(96, 125, 139, .6); }
-
-
-/* 2.0 LINE NUMBERS */
-.CodeMirror-gutters {
-    background-color: #263238;
-    border-right: 1px solid rgba(88,214,247, .3);
-}
-
-.CodeMirror .CodeMirror-linenumber { color: #C0D8D1; }
-
-
-/* 3.0 ACTIVE LINE */
-.CodeMirror-activeline-background,
-.CodeMirror-activeline .CodeMirror-gutter-elt { background: #000000 }
-
-
-/* 4.0 BRACKETS */
-.CodeMirror-matchingbracket {
-    background: 0 0!important;
-    color: #FDD835!important;
-    text-shadow: 0 0 5px #FDD835;
-    font-weight: 700;
-}
-
-.CodeMirror-nonmatchingbracket {
-    background: #D81B60!important;
-    color: #fff!important;
-}
+/* COLORS */
+@white: #ffffff;
+@black: #000000;
+@pink300: #F06292;
+@pink600: #D81B60;
+@grey500: #9e9e9e;
+@grey600: #757575;
+@green300: #81C784;
+@green600: #43A047;
+@green-light300: #AED581;
+@green-light600: #7CB342;
+@yellow300: #FFF176;
+@yellow600: #FDD835;
+@blue-light300: #4FC3F7;
+@blue-light600: #039BE5;
+@teal300: #4DB6AC;
+@teal600: #00897B;
+@purple300: #BA68C8;
+@purple600: #8E24AA;
+@brown300: #A1887F;
+@brown600: #6D4C41;
+@grey-blue100: #CFD8DC;
+@grey-blue900: #263238;
+@red: #B71C1C;
 
 
-/* 5.0 CURSOR */
-.CodeMirror .CodeMirror-cursor { border-left: 2px solid #ffffff!important; }
+/* VARs */
+@background: #212121;
+@foreground: #ECEFF1;
+@comment: @grey300;
+@comment-active: @grey600;
+@cursor: @white;
+@selected-background: rgba(96, 125, 139, .6);
+@meta: @white; // DOCTYPE, PHP <?php ?>
+@meta-background: @black;
+@tag: @pink300;
+@tag-active: @pink600;
+@attribute: @green300; // Attributes (HTML - class, id, src etc.)
+@attribute-active: @green300;
+@string: @yellow300; // Params (HTML params for attr.)
+@string-active: @yellow600;
+@qualifier: @teal300; // CSS class
+@qualifier-active: @teal600;
+@property: @green-light300; // CSS key
+@property-active: @green-light600;
+@defenition: @yellow300; // CSS value, JS(className, true, func params)
+@defenition-active: @yellow600;
+@number: @blue-light300;
+@number-active: @blue-light600;
+@keyword: @purple300;// var, new, if, this, function, CSS[and, !important]
+@keyword-active: @purple600;
+@builtin: @brown300;
+@builtin-active: @brown600;
+@operator: @white;
+@codemirror-background: @grey-blue900;
+@codemirror-foreground: @grey-blue100;
+@codemirror-activeline: @black;
+@codemirror-matchingbracket: @yellow600;
+@codemirror-nonmatchingbracket: @pink600;
+@codemirror-nonmatchingtag: @black;
+@error: @red;
+@codemirror-searching-background: @yellow300;
+@codemirror-searching-foreground: @yellow600;
 
 
-/* 7.0 COMMENTS */
-.cm-comment { color: #757575; }
+/* EDITOR */
+.CodeMirror,
+.CodeMirror-scroll { background-color: @background; color: @foreground; line-height:1.5; }
 
-.CodeMirror-activeline .cm-comment { color: #9e9e9e; }
+.CodeMirror .CodeMirror-cursor { border-left: 2px solid @cursor!important; }
+
+.CodeMirror-selected { background-color: @selected-background; }
 
 
-/* 8.0 VARIABLES */
+/* NOT EDITOR */
+.image-view,
+.not-editor { background-color: @background; }
+
+.view-pane .image-view { color: @foreground; }
+
+
+/* INLINE STYLES */
+.cm-comment { color: @comment; }
+
+.CodeMirror-activeline .cm-comment { color: @comment-active; }
+
+.cm-meta { background-color: @meta-background; color: @meta; }
+
+.CodeMirror-activeline .cm-meta { text-shadow: 0 0 1px @meta; }
+
+span.cm-tag { color: @tag; } // Tag (HTML tags)
+
+.CodeMirror-activeline span.cm-tag { color: @tag-active; }
+
+.cm-attribute { color: @attribute; }
+
+.CodeMirror-activeline .cm-attribute { color: @attribute-active; }
+
+.cm-string,
+.cm-string-2 { color: @string; } 
+
+.CodeMirror-activeline .cm-string,
+.CodeMirror-activeline .cm-string-2 { color: @string-active; }
+
+.cm-qualifier { color: @qualifier!important; } 
+
+.CodeMirror-activeline .cm-qualifier { color: @qualifier-active!important; }
+
+.cm-property { color: @property; }
+
+.CodeMirror-activeline .cm-property { color: @property-active!important; }
+
+.cm-atom,
+.cm-def { color: @defenition; }
+
+.CodeMirror-activeline .cm-atom,
+.CodeMirror-activeline .cm-def { color: @defenition-active; }
+
+.cm-number { color: @number; }
+
+.CodeMirror-activeline .cm-number { color: @number-active; }
+
+.cm-keyword { color: @keyword; }
+
+.CodeMirror-activeline .cm-keyword { color: @keyword-active; }
+
+.cm-builtin { color: @builtin!important }
+
+.CodeMirror-activeline .cm-builtin { color: @builtin-active!important }
+
+.cm-quote { color: @keyword!important; }
+
+.cm-operator { color: @operator; }
+
+.cm-error { color: @error; }
+
 .cm-variable,
 .cm-variable-2,
 .cm-variable-3,
-.cm-bracket { color: #29B26A; }
+.cm-bracket { color: @operator; }
 
 .CodeMirror-activeline .cm-variable,
 .CodeMirror-activeline .cm-variable-2,
 .CodeMirror-activeline .cm-variable-3 { color: #69F0AE; }
 
 
-/* 9.0 TAGS, ATTRS etc. */
-.cm-meta { color: #ffffff; } // HTML DOCTYPE
+/* STYLES - ADDITIONAL */
+.CodeMirror-activeline .cm-quote { color: @keyword-active!important; }
 
-.CodeMirror-activeline .cm-meta { text-shadow: 0 0 1px #ffffff; }
+.CodeMirror-gutters {
+    background-color: @codemirror-background;
+    border-right: 1px solid rgba(88,214,247, .3);
+}
 
-.CodeMirror-matchingtag { background-color: #000!important; }
+.CodeMirror .CodeMirror-linenumber { color: @codemirror-foreground; }
 
-span.cm-tag { color: #F06292; } // Tag (HTML tags)
+.CodeMirror-activeline-background,
+.CodeMirror-activeline .CodeMirror-gutter-elt { background-color: @codemirror-activeline!important }
 
-.CodeMirror-activeline span.cm-tag { color: #F06292; }
+.CodeMirror-matchingbracket {
+    background: 0 0!important;
+    outline: 1px solid @grey300;
+    color: @codemirror-matchingbracket!important;
+    text-shadow: 0 0 5px @codemirror-matchingbracket;
+    font-weight: 700;
+}
 
-.cm-attribute { color: #81C784; } // Attributes (HTML - class, id, src etc.)
+.CodeMirror-nonmatchingbracket {
+    background-color: @codemirror-nonmatchingbracket!important;
+    color: @white!important;
+}
 
-.CodeMirror-activeline .cm-attribute { color: #43A047; }
+.CodeMirror-matchingtag { background-color: @codemirror-nonmatchingtag!important; }
 
-.cm-string { color: #FFF176; } // Params (HTML params for attr.)
+.cm-meta.CodeMirror-searching {
+    background: @codemirror-searching-background !important;
+    color: @codemirror-searching-foreground !important;
+}
 
-.CodeMirror-activeline .cm-string { color: #FDD835; }
-
-.cm-qualifier { color: #4DB6AC!important; } // CSS selector
-
-.CodeMirror-activeline .cm-qualifier { color: #00897B!important; }
-
-.cm-property { color: #AED581; } // CSS property
-
-.CodeMirror-activeline .cm-property { color: #7CB342!important; }
-
-.cm-atom,
-.cm-def { color: #FFF176; } // line-properties (inline-block, className, true, func params, #values)
-
-.CodeMirror-activeline .cm-atom,
-.CodeMirror-activeline .cm-def { color: #FDD835; }
-
-.cm-number { color: #4FC3F7; } // Numbers
-
-.CodeMirror-activeline .cm-number { color: #039BE5; }
-
-.cm-keyword { color: #AB47BC; } // var, new, if, this, function, CSS[and, !important]
-
-.CodeMirror-activeline .cm-keyword { color: #8E24AA; }
-
-.cm-builtin,
-.cm-quote { color: #A1887F!important; } // ?
-
-.CodeMirror-activeline .cm-builtin,
-.CodeMirror-activeline .cm-quote { color: #6D4C41!important; }
-
-.cm-string-2 { color: #D50000; } // String
-
-.cm-error { color: #A72726; } // Error
-
-.cm-operator { color: #ffffff; }
-
-
-/* 10.0 NON-EDITOR STYLINGs */
-.image-view,
-.not-editor { background-color: #292929; }
-
-.view-pane .image-view { color: #64B5F6; }
+.cm-meta.CodeMirror-searching.searching-current-match {
+    background: @codemirror-searching-background !important;
+    color: @codemirror-searching-foreground !important;
+} 
