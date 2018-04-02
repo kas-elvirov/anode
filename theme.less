@@ -20,7 +20,7 @@
 
 
 
-/* 1.0 Code editor */
+/* 1.0 EDITOR */
 .CodeMirror, .CodeMirror-scroll {
     background-color: #212121;
     color: #fff;
@@ -29,48 +29,21 @@
 .CodeMirror-selected { background: rgba(96, 125, 139, .6); }
 
 
-/* 2.0 Line numbers */
+/* 2.0 LINE NUMBERS */
 .CodeMirror-gutters {
-    background-color: #2D2A25;
+    background-color: #263238;
     border-right: 1px solid rgba(88,214,247, .3);
 }
 
 .CodeMirror .CodeMirror-linenumber { color: #C0D8D1; }
 
 
-/* 3.0 Active line */
+/* 3.0 ACTIVE LINE */
 .CodeMirror-activeline-background,
 .CodeMirror-activeline .CodeMirror-gutter-elt { background: #000000 }
 
-.CodeMirror-activeline .cm-comment { color: #9e9e9e; }
 
-.CodeMirror-activeline .cm-qualifier { color: #00897B!important; }
-
-.CodeMirror-activeline .cm-variable,
-.CodeMirror-activeline .cm-variable-2,
-.CodeMirror-activeline .cm-variable-3 { color: #69F0AE; }
-
-.CodeMirror-activeline .cm-property { color: #7CB342!important; }
-
-.CodeMirror-activeline span.cm-tag { color: #F06292; }
-
-.CodeMirror-activeline .cm-attribute { color: #43A047; }
-
-.CodeMirror-activeline .cm-string { color: #FDD835; }
-
-.CodeMirror-activeline .cm-meta { text-shadow: 0 0 1px #ffffff; }
-
-.CodeMirror-activeline .cm-atom,
-.CodeMirror-activeline .cm-def { color: #FDD835; }
-
-.CodeMirror-activeline .cm-number { color: #039BE5; }
-
-.CodeMirror-activeline .cm-keyword,
-.CodeMirror-activeline .cm-builtin,
-.CodeMirror-activeline .cm-quote { color: #6D4C41!important; }
-
-
-/* 4.0 Brackets */
+/* 4.0 BRACKETS */
 .CodeMirror-matchingbracket {
     background: 0 0!important;
     color: #FDD835!important;
@@ -84,55 +57,82 @@
 }
 
 
-/* 5.0 Cursor */
+/* 5.0 CURSOR */
 .CodeMirror .CodeMirror-cursor { border-left: 2px solid #ffffff!important; }
 
 
-/* 6.0 Tags */
-.CodeMirror-matchingtag { background-color: #000!important; }
-
-
-/* 7.0 Comments */
+/* 7.0 COMMENTS */
 .cm-comment { color: #757575; }
 
+.CodeMirror-activeline .cm-comment { color: #9e9e9e; }
 
-/* 8.0 Variables */
+
+/* 8.0 VARIABLES */
 .cm-variable,
 .cm-variable-2,
 .cm-variable-3,
 .cm-bracket { color: #29B26A; }
 
+.CodeMirror-activeline .cm-variable,
+.CodeMirror-activeline .cm-variable-2,
+.CodeMirror-activeline .cm-variable-3 { color: #69F0AE; }
 
-/* 9.0 Other */
-.cm-atom,
-.cm-def { color: #FFF176; } // Definition
 
-.cm-number { color: #4FC3F7; } // Numbers
+/* 9.0 TAGS, ATTRS etc. */
+.cm-meta { color: #ffffff; } // HTML DOCTYPE
+
+.CodeMirror-activeline .cm-meta { text-shadow: 0 0 1px #ffffff; }
+
+.CodeMirror-matchingtag { background-color: #000!important; }
 
 span.cm-tag { color: #F06292; } // Tag (HTML tags)
 
+.CodeMirror-activeline span.cm-tag { color: #F06292; }
+
 .cm-attribute { color: #81C784; } // Attributes (HTML - class, id, src etc.)
 
+.CodeMirror-activeline .cm-attribute { color: #43A047; }
+
 .cm-string { color: #FFF176; } // Params (HTML params for attr.)
+
+.CodeMirror-activeline .cm-string { color: #FDD835; }
+
+.cm-qualifier { color: #4DB6AC!important; } // CSS selector
+
+.CodeMirror-activeline .cm-qualifier { color: #00897B!important; }
+
+.cm-property { color: #AED581; } // CSS property
+
+.CodeMirror-activeline .cm-property { color: #7CB342!important; }
+
+.cm-atom,
+.cm-def { color: #FFF176; } // line-properties (inline-block, className, true, func params, #values)
+
+.CodeMirror-activeline .cm-atom,
+.CodeMirror-activeline .cm-def { color: #FDD835; }
+
+.cm-number { color: #4FC3F7; } // Numbers
+
+.CodeMirror-activeline .cm-number { color: #039BE5; }
+
+.cm-keyword { color: #AB47BC; } // var, new, if, this, function, CSS[and, !important]
+
+.CodeMirror-activeline .cm-keyword { color: #8E24AA; }
+
+.cm-builtin,
+.cm-quote { color: #A1887F!important; } // ?
+
+.CodeMirror-activeline .cm-builtin,
+.CodeMirror-activeline .cm-quote { color: #6D4C41!important; }
 
 .cm-string-2 { color: #D50000; } // String
 
 .cm-error { color: #A72726; } // Error
 
-.cm-qualifier { color: #4DB6AC!important; } // CSS selector
-
-.cm-property { color: #AED581; } // CSS property
-
-.cm-meta { color: #ffffff; } // HTML DOCTYPE
-
-.cm-operator { color: #D50000; }
-
-.cm-keyword,
-.cm-builtin,
-.cm-quote { color: #A1887F!important; }
+.cm-operator { color: #ffffff; }
 
 
-/* 10.0 Non-editor styling */
+/* 10.0 NON-EDITOR STYLINGs */
 .image-view,
 .not-editor { background-color: #292929; }
 
