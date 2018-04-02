@@ -92,7 +92,8 @@
 
 
 /* INLINE STYLES */
-.cm-comment { color: @comment; }
+.cm-comment,
+.cm-hr { color: @comment; }
 
 .CodeMirror-activeline .cm-comment { color: @comment-active; }
 
@@ -142,7 +143,8 @@ span.cm-tag { color: @tag; } // Tag (HTML tags)
 
 .cm-quote { color: @keyword!important; }
 
-.cm-operator { color: @operator; }
+.cm-operator,
+.cm-link { color: @operator; }
 
 .cm-error { color: @error; }
 
@@ -192,4 +194,4 @@ span.cm-tag { color: @tag; } // Tag (HTML tags)
 .cm-meta.CodeMirror-searching.searching-current-match {
     background: @codemirror-searching-background !important;
     color: @codemirror-searching-foreground !important;
-} 
+}
