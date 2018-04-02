@@ -11,47 +11,9 @@
 * Search for `New Moon`
 * Click `Install`
 
-## HTML
-![HTML Screenshot](screenshots/html.png)
+## Screenshot
+![HTML Screenshot](screens/html.jpg)
 
-## XML
-![XML Screenshot](screenshots/xml.png)
-
-## PHP
-![PHP Screenshot](screenshots/php.png)
-
-## PHP/HTML
-![PHP Screenshot](screenshots/php-html.png)
-
-## CSS
-![CSS Screenshot](screenshots/css.png)
-
-## Sass/SCSS
-![SCSS Screenshot](screenshots/sass-scss.png)
-
-## LESS
-![LESS Screenshot](screenshots/less.png)
-
-## JavaScript
-![JS Screenshot](screenshots/js.png)
-
-## JSON
-![JSON Screenshot](screenshots/json.png)
-
-## jQuery
-![jQuery Screenshot](screenshots/jquery.png)
-
-## Markdown
-![MD Screenshot](screenshots/md.png)
-
-## C++
-![C++ Screenshot](screenshots/cpp.png)
-
-## SQL
-![SQL Screenshot](screenshots/sql.png)
-
-## Image
-![Image Screenshot](screenshots/image.png)
 
 
 **Gratitudes**
