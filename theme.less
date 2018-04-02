@@ -23,7 +23,7 @@
 
 /* 1.0 Code editor */
 .CodeMirror, .CodeMirror-scroll {
-    background-color: #263238;
+    background-color: #212121;
     color: #fff;
 }
 
@@ -41,28 +41,25 @@
 
 /* 3.0 Active line */
 .CodeMirror-activeline-background,
-.CodeMirror-activeline .CodeMirror-gutter-elt { background: #1A1A1A; }
+.CodeMirror-activeline .CodeMirror-gutter-elt { background: #000000 }
 
-.CodeMirror-activeline .cm-comment { color: #ffffff; }
+.CodeMirror-activeline .cm-comment { color: #9E9E9E; }
 
-.CodeMirror-activeline .cm-qualifier { color: #448AFF!important; }
+.CodeMirror-activeline .cm-qualifier { color: #01BF01!important; }
 
 .CodeMirror-activeline .cm-variable,
 .CodeMirror-activeline .cm-variable-2,
 .CodeMirror-activeline .cm-variable-3 { color: #69F0AE; }
 
-.CodeMirror-activeline .cm-property { color: #CE93D8!important; }
+.CodeMirror-activeline .cm-property { color: #017ABD!important; }
 
-.CodeMirror-activeline span.cm-tag {
-    color: #F4511E;
-    text-shadow: 0 0 1px #F4511E;
-}
+.CodeMirror-activeline span.cm-tag { color: #D81B60; }
 
-.CodeMirror-activeline .cm-attribute { color: #76FF03; }
+.CodeMirror-activeline .cm-attribute { color: #43A047; }
 
-.CodeMirror-activeline .cm-string { color: #D7CCC8; }
+.CodeMirror-activeline .cm-string { color: #FDD835; }
 
-.CodeMirror-activeline .cm-meta { text-shadow: 0 0 1px #D50000; }
+.CodeMirror-activeline .cm-meta { text-shadow: 0 0 1px #ffffff; }
 
 .CodeMirror-activeline .cm-atom,
 .CodeMirror-activeline .cm-def { color: #AEEA00; }
@@ -93,15 +90,15 @@
 
 
 /* 6.0 Tags */
-.CodeMirror-matchingtag { background-color: #1A1A1A!important; }
+.CodeMirror-matchingtag { background-color: #000!important; }
 
 
 /* 7.0 Comments */
-.cm-comment { color: #ECEFF1; }
+.cm-comment { color: #757575; }
 
 
 /* 8.0 Qualifier */
-.cm-qualifier { color: #64B5F6!important; }
+.cm-qualifier { color: #01C102!important; }
 
 
 /* 9.0 Variables */
@@ -117,19 +114,19 @@
 
 .cm-number { color: #EF5350; } // Number
 
-span.cm-tag { color: #FF8A65; } // Tag
+span.cm-tag { color: #F06292; } // Tag (HTML tags)
 
-.cm-attribute { color: #64DD17; } // Attribute (HTML - class)
+.cm-attribute { color: #81C784; } // Attributes (HTML - class, id, src etc.)
 
-.cm-string { color: #BCAAA4; } // String
+.cm-string { color: #FFF176; } // Params (HTML params for attr.)
 
 .cm-string-2 { color: #D50000; } // String
 
 .cm-error { color: #A72726; } // Error
 
-.cm-property { color: #E1BEE7; } // Property
+.cm-property { color: #079FD5; } // CSS property
 
-.cm-meta { color: #D50000; }
+.cm-meta { color: #ffffff; } // HTML DOCTYPE
 
 .cm-operator { color: #D50000; }
 
