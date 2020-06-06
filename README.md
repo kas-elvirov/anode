@@ -1,8 +1,11 @@
 # Color Scheme for Brackets [Anode](https://github.com/artem-solovev/anode/)
 
 
-
 ![Anode Icon](anode-logo.png)
+
+## History
+### Version:
+- current: 2.0.1 ( 2020, 6 june )
 
 
 **Installation**
